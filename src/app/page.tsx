@@ -1,13 +1,16 @@
+
 import React from 'react';
+import Image from 'next/image';
 import { ToyBlocksRow } from '@/components/toy-blocks';
 import { Countdown } from '@/components/countdown';
 import { ExcuseNeutralizer } from '@/components/excuse-neutralizer';
 import { RSVPAction } from '@/components/rsvp-action';
 import { ShareInvite } from '@/components/share-invite';
+import { CalendarActions } from '@/components/calendar-actions';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { 
   Calendar, 
   MapPin, 
-  Plus, 
   ArrowUpRight, 
   BookOpen, 
   Info, 
@@ -18,6 +21,8 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
+  const kiteImage = PlaceHolderImages.find(img => img.id === 'park-kites');
+
   return (
     <div className="min-h-screen relative flex items-center justify-center p-4 sm:p-6 lg:p-12 overflow-hidden bg-background">
       
@@ -51,7 +56,7 @@ export default function Home() {
       <main className="relative z-10 w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 auto-rows-[minmax(140px,auto)] gap-4 sm:gap-6">
         
         {/* 1. Hero Block */}
-        <div className="material-card p-8 md:col-span-12 lg:col-span-8 flex flex-col justify-center items-center text-center bg-[#FFF8E1] dark:bg-[#3E2723] shadow-sm relative">
+        <div className="material-card p-8 md:col-span-12 lg:col-span-8 flex flex-col justify-center items-center text-center bg-[#FFF8E1] dark:bg-[#3E2723] shadow-sm relative overflow-hidden">
           <div className="absolute top-6 right-6">
             <ShareInvite />
           </div>
@@ -78,9 +83,7 @@ export default function Home() {
             <div className="w-12 h-12 rounded-full bg-white dark:bg-[#1565C0] flex items-center justify-center text-google-blue dark:text-[#90CAF9] shadow-sm">
               <Calendar className="w-6 h-6" />
             </div>
-            <button className="text-xs font-semibold bg-white dark:bg-[#1976D2] text-[#0D47A1] dark:text-[#E3F2FD] px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-shadow flex items-center gap-2">
-              <Plus className="w-3.5 h-3.5" /> Sigh & Save
-            </button>
+            <CalendarActions />
           </div>
           
           <div>
@@ -97,8 +100,19 @@ export default function Home() {
           rel="noopener noreferrer"
           className="material-card md:col-span-6 lg:col-span-5 relative overflow-hidden group min-h-[200px] block no-underline focus:outline-none focus:ring-4 focus:ring-google-green/50 shadow-sm"
         >
-          <div className="absolute inset-0 map-bg transition-transform duration-700 group-hover:scale-105" />
-          <div className="absolute inset-x-0 bottom-0 p-5 bg-white dark:bg-[#1B5E20] border-t border-gray-100 dark:border-green-900 transition-colors">
+          {kiteImage && (
+            <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+              <Image 
+                src={kiteImage.imageUrl} 
+                alt={kiteImage.description}
+                fill
+                className="object-cover"
+                data-ai-hint={kiteImage.imageHint}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            </div>
+          )}
+          <div className="absolute inset-x-0 bottom-0 p-5 bg-white/95 dark:bg-[#1B5E20]/95 backdrop-blur-sm border-t border-gray-100 dark:border-green-900 transition-colors">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-google-red flex items-center justify-center text-white flex-shrink-0">
                 <MapPin className="w-6 h-6 fill-current" />
@@ -127,7 +141,7 @@ export default function Home() {
             <h3 className="text-xl font-headline font-semibold text-[#B71C1C] dark:text-[#F3E5F5]">Terms & Conditions</h3>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[#C62828] dark:text-[#E1BEE7] font-medium text-[15px] leading-relaxed">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[#C62828] dark:text-[#E1BEE7] font-medium text-[15px] PO-relaxed">
             <div className="flex gap-3">
               <Info className="w-5 h-5 flex-shrink-0 mt-0.5" />
               <p><strong>What:</strong> Picnic, cake, and casual uncomfortable memory-making.</p>

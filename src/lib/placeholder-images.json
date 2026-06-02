@@ -11,6 +11,12 @@
       "description": "A toddler smashing a cake",
       "imageUrl": "https://picsum.photos/seed/cake1/600/600",
       "imageHint": "birthday cake"
+    },
+    {
+      "id": "park-kites",
+      "description": "Kids flying kites in a sunny park",
+      "imageUrl": "https://picsum.photos/seed/kites77/800/600",
+      "imageHint": "park kites"
     }
   ]
 }
