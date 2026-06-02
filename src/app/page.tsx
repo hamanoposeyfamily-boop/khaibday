@@ -3,6 +3,7 @@ import { ToyBlocksRow } from '@/components/toy-blocks';
 import { Countdown } from '@/components/countdown';
 import { ExcuseNeutralizer } from '@/components/excuse-neutralizer';
 import { RSVPAction } from '@/components/rsvp-action';
+import { ShareInvite } from '@/components/share-invite';
 import { 
   Calendar, 
   MapPin, 
@@ -50,7 +51,11 @@ export default function Home() {
       <main className="relative z-10 w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-12 auto-rows-[minmax(140px,auto)] gap-4 sm:gap-6">
         
         {/* 1. Hero Block */}
-        <div className="material-card p-8 md:col-span-12 lg:col-span-8 flex flex-col justify-center items-center text-center bg-[#FFF8E1] dark:bg-[#3E2723] shadow-sm">
+        <div className="material-card p-8 md:col-span-12 lg:col-span-8 flex flex-col justify-center items-center text-center bg-[#FFF8E1] dark:bg-[#3E2723] shadow-sm relative">
+          <div className="absolute top-6 right-6">
+            <ShareInvite />
+          </div>
+          
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-google-yellow/20 dark:bg-google-yellow/10 text-google-yellow dark:text-[#FFE082] text-sm font-semibold tracking-wide uppercase mb-4">
             <AlertTriangle className="w-4 h-4 fill-current" />
             Family Obligation
