@@ -10,8 +10,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['Outfit', 'sans-serif'],
+        headline: ['Fredoka', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
@@ -65,6 +65,12 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        google: {
+          red: '#EA4335',
+          blue: '#4285F4',
+          yellow: '#FBBC04',
+          green: '#34A853',
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -88,10 +94,34 @@ export default {
             height: '0',
           },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+          '50%': { transform: 'translateY(-20px) rotate(3deg)' },
+        },
+        drive: {
+          '0%': { transform: 'translateX(-150%)' },
+          '100%': { transform: 'translateX(100vw)' },
+        },
+        jiggle: {
+          '0%, 100%': { transform: 'rotate(0deg) scale(1)' },
+          '25%': { transform: 'rotate(-15deg) scale(1.1)' },
+          '50%': { transform: 'rotate(15deg) scale(1.1)' },
+          '75%': { transform: 'rotate(-8deg) scale(1.05)' },
+        },
+        ripple: {
+          '0%': { transform: 'scale(0)', opacity: '0.5' },
+          '100%': { transform: 'scale(4)', opacity: '0' }
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'float-slow': 'float 8s ease-in-out infinite',
+        'float-slower': 'float 12s ease-in-out infinite',
+        'float-slowest': 'float 15s ease-in-out infinite',
+        'wagon-drive': 'drive 25s linear infinite',
+        'jiggle': 'jiggle 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
+        'ripple': 'ripple 0.6s linear',
       },
     },
   },

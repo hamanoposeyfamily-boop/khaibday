@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "birthday-park",
+      "description": "A sunny park for a picnic",
+      "imageUrl": "https://picsum.photos/seed/park1/1200/800",
+      "imageHint": "sunny park"
+    },
+    {
+      "id": "birthday-cake",
+      "description": "A toddler smashing a cake",
+      "imageUrl": "https://picsum.photos/seed/cake1/600/600",
+      "imageHint": "birthday cake"
+    }
+  ]
 }
