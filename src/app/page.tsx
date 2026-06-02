@@ -129,6 +129,7 @@ export default function Home() {
 
         {/* 4. AI Excuse Neutralizer */}
         <div className="md:col-span-12 lg:col-span-7">
+          <golden-excuse-neutralizer />
           <ExcuseNeutralizer />
         </div>
 
@@ -148,7 +149,7 @@ export default function Home() {
             </div>
             <div className="flex gap-3">
               <MapIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
-              <p><strong>The Setup:</strong> Shady spot near the big oak trees to avoid overheating and eye contact.</p>
+              <p><strong>The Setup:</strong> on the top of Kenneth Hahn Park near the playground</p>
             </div>
             <div className="flex gap-3">
               <Pizza className="w-5 h-5 flex-shrink-0 mt-0.5" />
