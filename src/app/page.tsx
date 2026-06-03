@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 export default function Home() {
-  const kiteImage = PlaceHolderImages.find(img => img.id === 'park-kites');
+  const mapImage = PlaceHolderImages.find(img => img.id === 'kenneth-hahn-map');
 
   return (
     <div className="min-h-screen relative flex items-center justify-center p-4 sm:p-6 lg:p-12 overflow-hidden bg-background">
@@ -100,14 +100,14 @@ export default function Home() {
           rel="noopener noreferrer"
           className="material-card md:col-span-6 lg:col-span-5 relative overflow-hidden group min-h-[200px] block no-underline focus:outline-none focus:ring-4 focus:ring-google-green/50 shadow-sm"
         >
-          {kiteImage && (
+          {mapImage && (
             <div className="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
               <Image 
-                src={kiteImage.imageUrl} 
-                alt={kiteImage.description}
+                src={mapImage.imageUrl} 
+                alt={mapImage.description}
                 fill
                 className="object-cover"
-                data-ai-hint={kiteImage.imageHint}
+                data-ai-hint={mapImage.imageHint}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
@@ -129,7 +129,6 @@ export default function Home() {
 
         {/* 4. AI Excuse Neutralizer */}
         <div className="md:col-span-12 lg:col-span-7">
-          <golden-excuse-neutralizer />
           <ExcuseNeutralizer />
         </div>
 
@@ -142,7 +141,7 @@ export default function Home() {
             <h3 className="text-xl font-headline font-semibold text-[#B71C1C] dark:text-[#F3E5F5]">Terms & Conditions</h3>
           </div>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[#C62828] dark:text-[#E1BEE7] font-medium text-[15px] PO-relaxed">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-[#C62828] dark:text-[#E1BEE7] font-medium text-[15px] leading-relaxed">
             <div className="flex gap-3">
               <Info className="w-5 h-5 flex-shrink-0 mt-0.5" />
               <p><strong>What:</strong> Picnic, cake, and casual uncomfortable memory-making.</p>

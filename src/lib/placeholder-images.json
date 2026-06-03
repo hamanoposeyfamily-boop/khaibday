@@ -17,6 +17,12 @@
       "description": "Kids flying kites in a sunny park",
       "imageUrl": "https://picsum.photos/seed/kites77/800/600",
       "imageHint": "park kites"
+    },
+    {
+      "id": "kenneth-hahn-map",
+      "description": "Satellite view map of Kenneth Hahn Park",
+      "imageUrl": "https://picsum.photos/seed/map99/800/600",
+      "imageHint": "satellite map"
     }
   ]
 }
