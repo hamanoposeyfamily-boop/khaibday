@@ -14,8 +14,8 @@ const EVENT_DETAILS = {
   title: "Khai's 2nd Birthday - Two Much Fun",
   description: "An intimate family celebration for Khai's second birthday. Picnic, cake, and casual uncomfortable memory-making. Directions: https://maps.google.com/?q=Kenneth+Hahn+Upper+Park,+4100+S+La+Cienega+Blvd,+Los+Angeles,+CA+90056",
   location: "Kenneth Hahn Upper Park, 4100 S La Cienega Blvd, Los Angeles, CA 90056",
-  startDate: "20260614T200000Z", // June 14, 1:00 PM PDT
-  endDate: "20260615T000000Z",   // June 14, 5:00 PM PDT
+  startDate: "20260614T130000", // 1:00 PM (13:00 on 24hr clock)
+  endDate: "20260614T170000",   // 5:00 PM (17:00 on 24hr clock)
 };
 
 export function CalendarActions() {
