@@ -87,7 +87,7 @@ export default function Home() {
           </div>
           
           <div>
-            <h3 className="text-2xl font-headline font-semibold text-[#0D47A1] dark:text-[#BBDEFB] mb-1">Sun, June 15</h3>
+            <h3 className="text-2xl font-headline font-semibold text-[#0D47A1] dark:text-[#BBDEFB] mb-1">Sun, June 14</h3>
             <p className="text-[17px] font-medium text-[#1565C0] dark:text-[#90CAF9] mb-4">1:00 PM - 4:00 PM</p>
             <Countdown />
           </div>
